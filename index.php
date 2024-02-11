@@ -18,8 +18,8 @@ get_header(); ?>
 
 	<body>
 		<div class="page-about">
-		<a href=page-about.php>固定ページ</a><br>
-		<a href="<?php echo home_url('/about/'); ?>">page-about.phpへの移動</a>
+		<a href=page-menu.php>固定ページ</a><br>
+		<a href="<?php echo home_url('/menu/'); ?>">page-menu.phpへの移動</a>
 </div>
 		<?php echo wp_title(); ?>
 </body>

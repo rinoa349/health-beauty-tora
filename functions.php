@@ -10,6 +10,17 @@
  */
 
 // This theme requires WordPress 5.3 or later.
+
+/***** CSSファイルの読み込み *****/
+wp_enqueue_style(
+  'm_style', /*  被らないようスタイル名をつける  */ 
+  get_template_directory_uri() . '/tora-style.css/about.css',
+  array(),
+  '1.0'
+);
+/***** CSSファイルの読み込み *****/
+
+
 if ( version_compare( $GLOBALS['wp_version'], '5.3', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
 }
