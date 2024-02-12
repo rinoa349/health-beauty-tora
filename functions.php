@@ -11,7 +11,8 @@
 
 // This theme requires WordPress 5.3 or later.
 
-/***********function-tora.phpからの読み込み ***********/
+/*********** my-func/function-tora.phpからの読み込み ***********/
+
 require('my-func/function-tora.php');
 
 /***********function-tora.phpからの読み込み ***********/

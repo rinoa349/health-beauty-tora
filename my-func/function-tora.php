@@ -11,13 +11,29 @@
 
 // This theme requires WordPress 5.3 or later.
 
-/***** CSSファイルの読み込み *****/
 
 /***** CSSファイルの読み込み *****/
-function my_styles()  {
-  // page-sample用のCSS
+
+/* menu.cssの読み込み */
+function page_menu()  {
   if ( is_page('menu') ) {
     wp_enqueue_style( 'menu', get_template_directory_uri() . '/tora-style.css/menu.css', array(), '1.0.0' );
     }
   }
-add_action( 'wp_enqueue_scripts', 'my_styles' );
+add_action( 'wp_enqueue_scripts', 'page_menu' );
+
+/* access.cssの読み込み */
+function page_access()  {
+  if ( is_page('access') ) {
+    wp_enqueue_style( 'access', get_template_directory_uri() . '/tora-style.css/access.css', array(), '1.0.0' );
+  }
+}
+add_action( 'wp_enqueue_scripts', 'page_access' );
+
+/* menu-list.cssの読み込み */
+function page_menu_list()  {
+  if (is_page('menu-list') ) {
+    wp_enqueue_style( 'menu-list', get_template_directory_uri() . '/tora-style.css/menu-list.css', array(), '1.0.0' );
+  }
+}
+add_action( 'wp_enqueue_scripts', 'page_menu_list' );
