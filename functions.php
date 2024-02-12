@@ -17,6 +17,8 @@ require('my-func/function-tora.php');
 
 /***********function-tora.phpからの読み込み ***********/
 
+wp_enqueue_style('google-fonts', '//fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap" rel="stylesheet"', array(), '1.0.0', 'all');
+
 if ( version_compare( $GLOBALS['wp_version'], '5.3', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
 }

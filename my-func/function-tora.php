@@ -37,3 +37,11 @@ function page_menu_list()  {
   }
 }
 add_action( 'wp_enqueue_scripts', 'page_menu_list' );
+
+/* reset.cssの読み込み */
+function reset_css()  {
+  if ( is_page('reset') ) {
+    wp_enqueue_style( 'reset', get_template_directory_uri(), array(), '1.0.0' );
+    }
+  }
+add_action( 'wp_enqueue_scripts', 'reset_css' );
